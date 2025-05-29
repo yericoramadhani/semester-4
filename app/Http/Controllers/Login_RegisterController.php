@@ -71,6 +71,7 @@ class Login_RegisterController extends Controller
     {
 
         // dd($request->all());
+        // dd(password_hash('admin1234', PASSWORD_BCRYPT, ['costs' => 12]));
 
         $request->validate([
             'email' => 'required',
@@ -79,7 +80,7 @@ class Login_RegisterController extends Controller
 
         $credentials = $request->only('email', 'password'); // Hanya ambil email dan password
 
-        if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')], true)) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
 
 
             if (Auth::user()->role == 'admin') {
