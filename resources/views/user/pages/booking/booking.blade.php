@@ -66,8 +66,8 @@
                                         <tr>
                                             <td>{{ $item->id }}</td>
                                             <td>{{ $item->rumah->nama }}</td>
-                                            <td>{{ $item->jam_mulai beli }}</td>
-                                            <td>{{ $item->jam_selesai beli }}</td>
+                                            <td>{{ $item->jam_mulai_beli }}</td>
+                                            <td>{{ $item->jam_selesai_beli }}</td>
                                             <td>{{ $item->rumah->harga}}</td>
                                             <td><button class="btn btn-warning pilihJadwal" data-bs-dismiss="modal">Pilih rumah</button></td>
                                         </tr>
