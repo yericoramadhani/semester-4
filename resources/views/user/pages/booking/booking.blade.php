@@ -65,11 +65,11 @@
                                     @foreach ($jadwal as $item)
                                         <tr>
                                             <td>{{ $item->id }}</td>
-                                            <td>{{ $item->lapangan->nama }}</td>
-                                            <td>{{ $item->jam_mulai }}</td>
-                                            <td>{{ $item->jam_selesai }}</td>
-                                            <td>{{ $item->lapangan->harga_per_jam }}</td>
-                                            <td><button class="btn btn-warning pilihJadwal" data-bs-dismiss="modal">Pilih jadwal</button></td>
+                                            <td>{{ $item->rumah->nama }}</td>
+                                            <td>{{ $item->jam_mulai beli }}</td>
+                                            <td>{{ $item->jam_selesai beli }}</td>
+                                            <td>{{ $item->rumah->harga}}</td>
+                                            <td><button class="btn btn-warning pilihJadwal" data-bs-dismiss="modal">Pilih rumah</button></td>
                                         </tr>
                                     @endforeach
                                 @endif

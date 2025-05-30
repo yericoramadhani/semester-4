@@ -4,14 +4,14 @@
     <div class="card px-4 py-2 tab-pane "  id="navs-pills-top-aktif" role="tabpanel">
         <a href="" class="btn btn-primary my-3"
         style="display: inline-block; width: auto; max-width: fit-content;" data-bs-toggle="modal" data-bs-target="#tambahlapangan" >
-        Tambah Data Lapangan
+        Tambah Data rumah
     </a>
     
     <div class="text-nowrap table-responsive pt-0">
         <table id="myTable" class="datatables-basic table border-top">
             <thead>
                 <tr>
-                    <th>Nama Lapangan</th>
+                    <th>rumah</th>
                     <th>Deskripsi</th>
                     <th>ukuran</th>
                     <th>type</th>
@@ -29,13 +29,13 @@
                         <td>{{ $item->deskripsi  }}</td>
                         <td>{{ $item->ukuran  }}</td>
                         <td>{{ $item->tipe  }}</td>
-                        <td>{{ $item->harga_per_jam  }}</td>
+                        <td>{{ $item->harga }}</td>
                         <td><img style="width: 170px;" src="/{{ $item->gambar }}" alt=""></td>
                         <td>{{ $item->status  }}</td>
                         <td class="">
                             <a href="{{ route('jadwal', $item->id) }}">
                             <button type="submit" class="btn btn-primary mb-3"
-                                >Detail Jadwal</button>
+                                >Detail rumah</button>
                             <div class="d-flex gap-3">
                             </a>
                                 
@@ -58,24 +58,24 @@
                         <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="modalToggleLabel">Edit Data Lapangan</h5>
+                              <h5 class="modal-title" id="modalToggleLabel">Edit Data rumah</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <form action="{{ route('edit_lapangan', $item->id ) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @method('put')
                             <div class="modal-body">
-                                <label for="defaultFormControlInput" class="form-label">Lapangan</label>
-                                <input type="text" class="form-control mb-2" id="defaultFormControlInput" value="{{ $item->nama }}" placeholder="nama lapangan" name="nama" aria-describedby="defaultFormControlHelp" />
+                                <label for="defaultFormControlInput" class="form-label">rumah</label>
+                                <input type="text" class="form-control mb-2" id="defaultFormControlInput" value="{{ $item->nama }}" placeholder="nama rumah" name="nama" aria-describedby="defaultFormControlHelp" />
                                 <label for="defaultFormControlInput" class="form-label">Deskripsi</label>
                                 <input type="text" class="form-control mb-2" id="defaultFormControlInput" value="{{ $item->deskripsi }}" placeholder="deskripsi" name="deskripsi" aria-describedby="defaultFormControlHelp" />
                                 <label for="defaultFormControlInput" class="form-label">Ukuran</label>
                                 <input type="text" class="form-control mb-2" id="defaultFormControlInput" value="{{ $item->ukuran }}" placeholder="ukuran" name="ukuran" aria-describedby="defaultFormControlHelp" />
                                 <label for="defaultFormControlInput" class="form-label">Type</label>
                                 <select class="form-select mb-2" name="tipe" id="exampleFormControlSelect1" aria-label="Default select example">
-                                    <option value="futsal" {{ $item->jenis == 'futsal' ? 'selected' : '' }}>Futsal</option>
-                                    <option value="basket" {{ $item->jenis == 'basket' ? 'selected' : '' }}>Basket</option>
-                                    <option value="Badminton" {{ $item->jenis == 'badminton' ? 'selected' : '' }}>Badminton</option>
+                                    <option value="futsal" {{ $item->jenis == 'rumah' ? 'selected' : '' }}>rumah</option>
+                                    <option value="basket" {{ $item->jenis == 'rumah' ? 'selected' : '' }}>rumah</option>
+                                    <option value="Badminton" {{ $item->jenis == 'rumah' ? 'selected' : '' }}>rumah</option>
                                 </select>
                                 <label for="defaultFormControlInput" class="form-label">Harga</label>
                                 <input type="text" class="form-control mb-2" name="harga" value="{{ $item->harga_per_jam }}" id="defaultFormControlInput" placeholder="Harga" aria-describedby="defaultFormControlHelp" />
@@ -108,13 +108,13 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="modalToggleLabel">Tambah Data Lapangan</h5>
+              <h5 class="modal-title" id="modalToggleLabel">Tambah data rumah</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('tambah_lapangan') }}" method="POST" enctype="multipart/form-data">
                 @csrf
             <div class="modal-body">
-                <label for="defaultFormControlInput" class="form-label">Lapangan</label>
+                <label for="defaultFormControlInput" class="form-label">rumah</label>
                 <input type="text" class="form-control mb-2" id="defaultFormControlInput" placeholder="nama lapangan" name="nama" aria-describedby="defaultFormControlHelp" />
                 <label for="defaultFormControlInput" class="form-label">Deskripsi</label>
                 <input type="text" class="form-control mb-2" id="defaultFormControlInput" placeholder="deskripsi" name="deskripsi" aria-describedby="defaultFormControlHelp" />
@@ -122,9 +122,9 @@
                 <input type="text" class="form-control mb-2" id="defaultFormControlInput" placeholder="ukuran" name="ukuran" aria-describedby="defaultFormControlHelp" />
                 <label for="defaultFormControlInput" class="form-label">Type</label>
                 <select class="form-select mb-2" name="tipe" id="exampleFormControlSelect1" aria-label="Default select example">
-                    <option value="futsal">Futsal</option>
-                    <option value="basket">Basket</option>
-                    <option value="Badminton">Badminton</option>
+                    <option value="futsal">rumah</option>
+                    <option value="basket">rumah</option>
+                    <option value="Badminton">rumah</option>
                 </select>
                 <label for="defaultFormControlInput" class="form-label">Harga</label>
                 <input type="text" class="form-control mb-2" name="harga" id="defaultFormControlInput" placeholder="Harga" aria-describedby="defaultFormControlHelp" />

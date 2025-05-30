@@ -41,7 +41,7 @@
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="modalToggleLabel">Edit Data Pelanggan</h5>
+                                        <h5 class="modal-title" id="modalToggleLabel">Edit Data rumah</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <form action="{{ route('edit_pelanggan', $item->id) }}" method="POST">
