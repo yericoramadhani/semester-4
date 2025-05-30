@@ -115,7 +115,7 @@
                 @csrf
             <div class="modal-body">
                 <label for="defaultFormControlInput" class="form-label">rumah</label>
-                <input type="text" class="form-control mb-2" id="defaultFormControlInput" placeholder="nama lapangan" name="nama" aria-describedby="defaultFormControlHelp" />
+                <input type="text" class="form-control mb-2" id="defaultFormControlInput" placeholder="nama rumah" name="nama" aria-describedby="defaultFormControlHelp" />
                 <label for="defaultFormControlInput" class="form-label">Deskripsi</label>
                 <input type="text" class="form-control mb-2" id="defaultFormControlInput" placeholder="deskripsi" name="deskripsi" aria-describedby="defaultFormControlHelp" />
                 <label for="defaultFormControlInput" class="form-label">Ukuran</label>

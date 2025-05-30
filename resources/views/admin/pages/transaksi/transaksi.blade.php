@@ -6,14 +6,14 @@
         
     <div class="mb-2 d-flex w-full gap-2 justify-content-end">
     <button id="resetButton" class="btn btn-danger" >Reset</button>
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carijadwal">Cari Jadwal</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carijadwal">Cari jadwal rumah</button>
 </div>
     <table id="selectedTable" class="datatables-basic table border-top mb-2">
                         <thead>
                             <tr>
                                 <th>id</th>
-                                <th>Nama Lapangan</th>
-                                <th>Jam Mulai</th>
+                                <th>rumah</th>
+                                <th>Jam beli</th>
                                 <th>Jam Selesai</th>
                                 <th>Harga</th>
                                 <th>Aksi</th>
@@ -101,9 +101,9 @@
                     <table id="modalTable" class="datatables-basic table border-top">
                         <thead>
                             <tr>
-                                <th>id_jadwal</th>
-                                <th>Nama Lapangan</th>
-                                <th>Jam Mulai</th>
+                                <th>id_</th>
+                                <th>rumah</th>
+                                <th>Jam beli rumah</th>
                                 <th>Jam Selesai</th>
                                 <th>Harga</th>
                                 <th>Aksi</th>
@@ -112,7 +112,7 @@
                         <tbody>
                             @if($jadwal->isEmpty()) <!-- Cek jika jadwal kosong -->
                                 <tr>
-                                    <td colspan="6" style="color: red; font-weight: bold;" class="text-center">Jadwal lagi penuh</td>
+                                    <td colspan="6" style="color: red; font-weight: bold;" class="text-center">Jadwal pembelian rumah penuh</td>
                                 </tr>
                             @else
                                 @foreach ($jadwal as $item)

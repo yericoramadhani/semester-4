@@ -70,14 +70,14 @@
       <li class="menu-item  @active('lapangan')">
         <a href="{{ route('lapangan') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-book-heart"></i>
-          <div data-i18n="Layouts">Data Lapangan</div>
+          <div data-i18n="Layouts">Data Rumah</div>
         </a>
       </li>
       
       <li class="menu-item @active('pelanggan.index') ">
         <a href="{{ route('pelanggan.index') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-book-heart"></i>
-          <div data-i18n="Layouts">Data Pelanggan</div>
+          <div data-i18n="Layouts">Data Pelanggan Rumah</div>
         </a>
       </li>
       
