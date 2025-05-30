@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Booking | Home</title>
+  <title>Jual beli Rumah| Home</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -45,7 +45,7 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets_landing/img/logo.png" alt=""> -->
-        <h1 class="sitename">Booking</h1>
+        <h1 class="sitename">Jual beli Rumah</h1>
         <span>.</span>
       </a>
 
@@ -93,15 +93,16 @@
       <div class="container">
         <div class="row gy-4 justify-content-center justify-content-lg-between">
           <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h1 data-aos="fade-up">Pesan Lapangan Basket<br>Favoritmu Sekarang Juga!</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Nikmati pengalaman bermain basket dengan mudah dan cepat. Pilih jadwal sesuai keinginan!</p>
+            <h1 data-aos="fade-up">Jual Beli Rumah
+<br>Favoritmu Sekarang Juga!</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Nikmati pengalaman mencari rumah dengan mudah dan cepat.</p>
             <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-              <a href="#book-a-table" class="btn-get-started">Booking Sekarang</a>
+              <a href="#book-a-table" class="btn-get-started">Cari </a>
               {{-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
             </div>
           </div>
           <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <img src="images/model2.jpg" style="width: 310px" class="img-fluid animated" alt="">
+            <img src="images/" style="width: 310px" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>
@@ -121,7 +122,7 @@
 
         <div class="row gy-4">
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-            <img src="images/lapangan2.jpg" style="height: 590px; width: 800px; background-size: cover;" class="img-fluid mb-4" alt="">
+            <img src="images/rumah1.png" style="height: 590px; width: 800px; background-size: cover;" class="img-fluid mb-4" alt="">
             {{-- <div class="book-a-table">
               <h3>Book a Table</h3>
               <p>+1 5589 55488 55</p>
@@ -130,20 +131,20 @@
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="250">
             <div class="content ps-0 ps-lg-5">
               <p class="fst-italic">
-                Nikmati pengalaman bermain basket yang menyenangkan dan mudah. Pilih jadwal lapangan basket favoritmu dan lakukan booking sekarang!
+                nikmati waktu anda mencari rumah
               </p>
               <ul>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Booking lapangan basket dengan cepat dan mudah kapan saja.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Jadwal fleksibel sesuai dengan kebutuhanmu, pilih yang terbaik!</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Proses pemesanan yang mudah dan aman, jaminan kenyamanan bermain basket.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>beli rumah bisa disini.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>pilihlah rumah terbaik anda</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>proses pembelian di pastikan aman</span></li>
               </ul>
               <p>
-                Segera lakukan pemesanan untuk mendapatkan tempat di lapangan basket favoritmu. Nikmati bermain dengan teman-teman tanpa khawatir kehabisan jadwal.
+                Segera lakukan pembelian untuk mendapatkan tempat tinggal anda. Nikmati bermain dengan keluarga dengan nyaman.
               </p>
               
 
               <div class="position-relative mt-4">
-                <img src="images/lapangan3.jpg" style="height: 290px; width: 400px; background-size: cover;" class="img-fluid" alt="">
+                <img src="images/rumah1.png" style="height: 290px; width: 400px; background-size: cover;" class="img-fluid" alt="">
                 {{-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a> --}}
               </div>
             </div>
@@ -213,7 +214,7 @@
     <!-- Stats Section -->
     <section id="stats" class="stats section dark-background">
 
-      <img src="images/lapangan4.jpg" alt="" data-aos="fade-in">
+      <img src="images/rumah1.png" alt="" data-aos="fade-in">
 
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
 
@@ -222,27 +223,21 @@
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="2" class="purecounter"></span>
-              <p>Lapangan</p>
+              <p>Rumah</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="343" data-purecounter-duration="2" class="purecounter"></span>
-              <p>Di Booking</p>
+              <p>rumah yang sudah di pesan</p>
             </div>
           </div><!-- End Stats Item -->
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="353" data-purecounter-duration="2" class="purecounter"></span>
-              <p>Jam Dibooking</p>
-            </div>
-          </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end=" 2" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end=" 4" data-purecounter-duration="2" class="purecounter"></span>
               <p>Pekerja</p>
             </div>
           </div><!-- End Stats Item -->
@@ -650,11 +645,11 @@
                     <div class="testimonial-content">
                       <p>
                         <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Lapangan ini sangat nyaman untuk bermain. Permukaannya rapi dan terawat, sehingga aktivitas olahraga menjadi lebih menyenangkan!</span>
+                        <span>Rumah mana yang anda minati. Permukaannya rapi dan terawat, sehingga aktivitas olahraga menjadi lebih menyenangkan!</span>
                         <i class="bi bi-quote quote-icon-right"></i>
                       </p>
-                      <h3>Andi Setiawan, </h3>
-                      <h4>Atlet Sepak Bola</h4>
+                      <h3>Kelompok 4, </h3>
+                      <h4>vendor perumahan</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
@@ -668,7 +663,7 @@
             </div><!-- End testimonial item -->
             {{-- @endforeach
             @else
-                <h1 >Ulasan tidak ditemukan</h1>
+                <h1 >rumah tidak ditemukan</h1>
             @endif --}}
             
 
@@ -795,7 +790,7 @@
                     </div>
                 @endforeach
             @else
-                <h1 >Lapangan tidak ditemukan</h1>
+                <h1 >RUMAH BELUM DI PESAN</h1>
             @endif
         </div>
           <div class="swiper-pagination"></div>
@@ -926,7 +921,7 @@
               <div class="text-center mt-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+                <div class="sent-message">Your home request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
                 <button type="submit">Book a Table</button>
               </div>
             </form>
@@ -1139,7 +1134,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">BookingLapangan</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">jual beli rumah</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->

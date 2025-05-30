@@ -4,16 +4,16 @@
     <div class="card px-4 py-2 tab-pane" id="navs-pills-top-aktif" role="tabpanel">
         <div class="mb-2 d-flex w-full gap-2 justify-content-end">
             <button id="resetButton" class="btn btn-danger">Reset</button>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carijadwal">Cari Jadwal</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carijadwal">Cari rumah yang anda inginkan</button>
         </div>
 
         <table id="selectedTable" class="datatables-basic table border-top mb-2">
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>Nama Lapangan</th>
-                    <th>Jam Mulai</th>
-                    <th>Jam Selesai</th>
+                    <th>rumah</th>
+                    <th>jam pembelian di mulai</th>
+                    <th>Jam pembelian selesai</th>
                     <th>Harga</th>
                     <th>Aksi</th>
                 </tr>
@@ -48,10 +48,10 @@
                         <table id="modalTable" class="datatables-basic table border-top">
                             <thead>
                                 <tr>
-                                    <th>id_jadwal</th>
-                                    <th>Nama Lapangan</th>
-                                    <th>Jam Mulai</th>
-                                    <th>Jam Selesai</th>
+                                    <th>id_rumah</th>
+                                    <th>rumah yang di beli</th>
+                                    <th>Jam pembelian di mulai</th>
+                                    <th>Jam pembelian Selesai</th>
                                     <th>Harga</th>
                                     <th>Aksi</th>
                                 </tr>

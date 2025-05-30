@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
-      <title>Booking | Register</title>
+      <title> Jual Beli Rumah | Register</title>
       <link rel="stylesheet" href="{{ asset('css/login.css') }}">
       <link rel="stylesheet" href="{{ asset('js/login1.js') }}">
 
