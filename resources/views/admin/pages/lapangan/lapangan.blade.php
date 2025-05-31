@@ -71,11 +71,9 @@
                                 <input type="text" class="form-control mb-2" id="defaultFormControlInput" value="{{ $item->deskripsi }}" placeholder="deskripsi" name="deskripsi" aria-describedby="defaultFormControlHelp" />
                                 <label for="defaultFormControlInput" class="form-label">Ukuran</label>
                                 <input type="text" class="form-control mb-2" id="defaultFormControlInput" value="{{ $item->ukuran }}" placeholder="ukuran" name="ukuran" aria-describedby="defaultFormControlHelp" />
-                                <label for="defaultFormControlInput" class="form-label">Type</label>
-                                <select class="form-select mb-2" name="tipe" id="exampleFormControlSelect1" aria-label="Default select example">
-                                    <option value="futsal" {{ $item->jenis == 'rumah' ? 'selected' : '' }}>rumah</option>
-                                    <option value="basket" {{ $item->jenis == 'rumah' ? 'selected' : '' }}>rumah</option>
-                                    <option value="Badminton" {{ $item->jenis == 'rumah' ? 'selected' : '' }}>rumah</option>
+                               
+                                  
+
                                 </select>
                                 <label for="defaultFormControlInput" class="form-label">Harga</label>
                                 <input type="text" class="form-control mb-2" name="harga" value="{{ $item->harga_per_jam }}" id="defaultFormControlInput" placeholder="Harga" aria-describedby="defaultFormControlHelp" />

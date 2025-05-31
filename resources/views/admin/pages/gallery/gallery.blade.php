@@ -11,9 +11,7 @@
             <table id="myTable" class="datatables-basic table border-top">
                 <thead>
                     <tr>
-                        <th>id</th>
-                        <th>gambar</th>
-                        <th>Aksi</th>
+                        
                         
                     </tr>
                 </thead>
@@ -77,6 +75,7 @@
                     <label for="defaultFormControlInput" class="form-label">Gambar</label>
                     <input type="file" class="form-control mb-2" name="gambar" id="defaultFormControlInput" placeholder="Gambar" aria-describedby="defaultFormControlHelp" />
                     
+                    
                 </div>
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal">Tambah Data</button>
@@ -138,3 +137,4 @@
   
      </script>
 @endsection
+

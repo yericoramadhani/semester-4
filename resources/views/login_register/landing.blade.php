@@ -97,7 +97,8 @@
 <br>Favoritmu Sekarang Juga!</h1>
             <p data-aos="fade-up" data-aos-delay="100">Nikmati pengalaman mencari rumah dengan mudah dan cepat.</p>
             <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-              <a href="#book-a-table" class="btn-get-started">Cari </a>
+              <img src="images/rumah2.png" alt="Deskripsi gambar" width="1300">
+
               {{-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
             </div>
           </div>
@@ -645,7 +646,7 @@
                     <div class="testimonial-content">
                       <p>
                         <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Rumah mana yang anda minati. Permukaannya rapi dan terawat, sehingga aktivitas olahraga menjadi lebih menyenangkan!</span>
+                        <span>Rumah mana yang anda minati. Permukaannya rapi dan terawat, sehingga aktivitas bersama keluarga menjadi lebih menyenangkan!</span>
                         <i class="bi bi-quote quote-icon-right"></i>
                       </p>
                       <h3>Kelompok 4, </h3>
