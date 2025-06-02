@@ -5,14 +5,14 @@
 
             <a href="" class="btn btn-primary my-3"
             style="display: inline-block; width: auto; max-width: fit-content;" data-bs-toggle="modal" data-bs-target="#tambahjadwal">
-            Tambah Data Jadwal
+            Tambah Data rumah
         </a>
         
         <div class="text-nowrap table-responsive pt-0">
             <table id="myTable" class="datatables-basic table border-top">
                 <thead>
                     <tr>
-                        <th>Nama Lapangan</th>
+                        <th>Nama rumah</th>
                         <th>jam_mulai</th>
                         <th>jam_berakhir</th>
                         <th>status</th>

@@ -53,7 +53,7 @@ class adminController extends Controller
     {
         $lapangan = lapanganModel::all();
         return view('admin.pages.lapangan.lapangan', [
-            'title' => 'Lapangan',
+            'title' => 'Data Rumah',
             'lapangan' => $lapangan,
         ]);
     }
@@ -73,7 +73,7 @@ class adminController extends Controller
     {
         $jadwal = jadwalModel::with('lapangan')->where('status', 'tersedia')->get();
         return view('admin.pages.transaksi.transaksi', [
-            'title' => 'Transaksi',
+            'title' => 'Prediksi',
             'jadwal' => $jadwal,
         ]);
     }

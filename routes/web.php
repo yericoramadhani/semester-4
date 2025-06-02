@@ -86,6 +86,7 @@ Route::prefix('user')->middleware('user')->group(function () {
 Route::get('/auth/google/callback', [SocialliteController::class, 'callback'])->name('redirect');
 Route::get('/auth/redirect', [SocialliteController::class, 'redirect'])->name('redirect');
 
+
 Route::get('/pelanggan', [PelangganController::class, 'index'])->name('pelanggan');
 Route::post('/tambah-pelanggan', [PelangganController::class, 'store'])->name('tambah_pelanggan');
 Route::put('/edit-pelanggan/{id}', [PelangganController::class, 'update'])->name('edit_pelanggan');
