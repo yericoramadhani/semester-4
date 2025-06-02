@@ -52,7 +52,8 @@ class transaksiController extends Controller
                 $jadwal->update(['status' => 'dipesan']);
             }
 
-            return redirect()->route('transaksi')->with(Session::flash('berhasil_tambah', true));
+            return redirect()->route('transaksi')->with('berhasil_tambah', true);
+
         } catch (\Exception $e) {
             return response()->json(['message' => 'Terjadi kesalahan: ' . $e->getMessage()], 500);
         }
@@ -163,6 +164,7 @@ class transaksiController extends Controller
         // dd($request);
         $transaksi = transaksiModel::findOrFail($id);
 
+
         $transaksi->user_id = $request->input('user_id');
         $transaksi->metode = $request->input('metode');
         $transaksi->status = $request->input('status');
@@ -184,7 +186,8 @@ class transaksiController extends Controller
             $file->move(public_path('gambar_transaksi'), $fileName);
 
             // Update the database with the new image path
-            $transaksi->gambar = 'gambar_transaksi/' . $fileName;
+            $transaksi->bukti_pembayaran = 'gambar_transaksi/' . $fileName;
+
         }
 
         $transaksi->save();

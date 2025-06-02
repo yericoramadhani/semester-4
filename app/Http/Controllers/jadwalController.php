@@ -23,17 +23,17 @@ class jadwalController extends Controller
 
         // If validation fails
         if ($validasi->fails()) {
-            return redirect()->route('jadwal', $request->id_lapangan)->with(Session::flash('kosong_tambah', true));
+            return redirect()->route('jadwal', $request->id_rumah)->with(Session::flash('kosong_tambah', true));
         }
 
         // Cek apakah jam_mulai lebih kecil dari jam_selesai
         if (strtotime($request->jam_mulai) >= strtotime($request->jam_selesai)) {
-            return redirect()->route('jadwal', $request->id_lapangan)
+            return redirect()->route('jadwal', $request->id_rumah)
                 ->with(Session::flash('error_jam', 'Jam mulai harus lebih kecil dari jam selesai'));
         }
 
         // Cek overlap dengan jadwal yang sudah ada
-        $overlap = jadwalModel::where('id_lapangan', $request->id_lapangan)
+        $overlap = jadwalModel::where('id_rumah', $request->id_rumah)
             ->where(function($query) use ($request) {
                 $query->whereBetween('jam_mulai', [$request->jam_mulai, $request->jam_selesai])
                     ->orWhereBetween('jam_selesai', [$request->jam_mulai, $request->jam_selesai])
@@ -45,7 +45,7 @@ class jadwalController extends Controller
             ->exists();
 
         if ($overlap) {
-            return redirect()->route('jadwal', $request->id_lapangan)
+            return redirect()->route('jadwal', $request->id_rumah)
                 ->with(Session::flash('error_jam', 'Jadwal ini overlap dengan jadwal yang sudah ada'));
         }
 
@@ -53,14 +53,14 @@ class jadwalController extends Controller
             'jam_mulai' => $request->jam_mulai,
             'jam_selesai' => $request->jam_selesai,
             'status' => 'tersedia',
-            'id_lapangan' => $request->id_lapangan,
+            'id_rumah' => $request->id_rumah,
 
         ]);
 
         if ($jadwal) {
-            return redirect()->route('jadwal', $request->id_lapangan)->with(Session::flash('berhasil_tambah', true));
+            return redirect()->route('jadwal', $request->id_rumah)->with(Session::flash('berhasil_tambah', true));
         } else {
-            return redirect()->route('jadwal', $request->id_lapangan)->with(Session::flash('gagal_tambah', true));
+            return redirect()->route('jadwal', $request->id_rumah)->with(Session::flash('gagal_tambah', true));
         }
     }
 
@@ -72,7 +72,7 @@ class jadwalController extends Controller
 
         $jadwal->delete();
 
-        return redirect()->route('jadwal', $request->id_lapangan)->with(Session::flash('berhasil_hapus', true));
+        return redirect()->route('jadwal', $request->id_rumah)->with(Session::flash('berhasil_hapus', true));
     }
 
     public function edit(Request $request, $id)
@@ -82,12 +82,12 @@ class jadwalController extends Controller
 
         // Cek apakah jam_mulai lebih kecil dari jam_selesai
         if (strtotime($request->jam_mulai) >= strtotime($request->jam_selesai)) {
-            return redirect()->route('jadwal', $request->id_lapangan)
+            return redirect()->route('jadwal', $request->id_rumah)
                 ->with(Session::flash('error_jam', 'Jam mulai harus lebih kecil dari jam selesai'));
         }
 
         // Cek overlap dengan jadwal lain (kecuali jadwal yang sedang diedit)
-        $overlap = jadwalModel::where('id_lapangan', $request->id_lapangan)
+        $overlap = jadwalModel::where('id_rumah', $request->id_rumah)
             ->where('id', '!=', $id)
             ->where(function($query) use ($request) {
                 $query->whereBetween('jam_mulai', [$request->jam_mulai, $request->jam_selesai])
@@ -100,7 +100,7 @@ class jadwalController extends Controller
             ->exists();
 
         if ($overlap) {
-            return redirect()->route('jadwal', $request->id_lapangan)
+            return redirect()->route('jadwal', $request->id_rumah)
                 ->with(Session::flash('error_jam', 'Jadwal ini overlap dengan jadwal yang sudah ada'));
         }
 
@@ -109,6 +109,6 @@ class jadwalController extends Controller
 
         $jadwal->save();
 
-        return redirect()->route('jadwal', $request->id_lapangan)->with(Session::flash('berhasil_edit', true));
+        return redirect()->route('jadwal', $request->id_rumah)->with(Session::flash('berhasil_edit', true));
     }
 }

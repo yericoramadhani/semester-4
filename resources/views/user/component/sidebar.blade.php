@@ -69,7 +69,7 @@
       <li class="menu-item  @active('transaksi_user')">
         <a href="{{ route('transaksi_user') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-book-heart"></i>
-          <div data-i18n="Layouts">Booking</div>
+          <div data-i18n="Layouts">rumah</div>
         </a>
       </li>
       {{-- <li class="menu-item  @active('ulasan_user')">

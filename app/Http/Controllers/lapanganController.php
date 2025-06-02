@@ -2,103 +2,103 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\lapanganModel;
+use App\Models\LapanganModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
-class lapanganController extends Controller
+class LapanganController extends Controller
 {
     public function tambah(Request $request)
     {
-
-        $halo = [
+        // Validasi input
+        $request->validate([
             'nama' => 'required',
             'deskripsi' => 'required',
-            'ukuran' => 'required', // Validate image types
-            'harga' => 'required', // Validate image types
-            'status' => 'required', // Validate image types
-            'tipe' => 'required', // Validate image types
-
-        ];
-
-        $validasi = Validator::make($request->all(), $halo);
-
-        // If validation fails
-        if ($validasi->fails()) {
-            return redirect()->route('lapangan')->with(Session::flash('kosong_tambah', true));
-        }
-
+            'ukuran' => 'required',
+            'harga' => 'required',
+            'status' => 'required',
+            'tipe' => 'required',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
+        ]);
 
         $fileName = null;
 
-
-        // Handle image upload
+        // Handle upload gambar
         if ($request->hasFile('gambar')) {
             $file = $request->file('gambar');
-            $fileName = time() . '.' . $file->getClientOriginalExtension(); // Generate a unique name for the file
-            $file->move(public_path('gambar_lapangan'), $fileName); // Move the image to the public/gambar_lapangan folder
+            $fileName = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('gambar_lapangan'), $fileName);
         }
 
-        $lapangan = lapanganModel::create([
+        $lapangan = LapanganModel::create([
             'nama' => $request->nama,
             'deskripsi' => $request->deskripsi,
             'ukuran' => $request->ukuran,
             'harga_per_jam' => $request->harga,
             'status' => $request->status,
             'tipe' => $request->tipe,
-            'gambar' => 'gambar_lapangan/' . $fileName, // Save the path to the database
+            'gambar' => $fileName ? 'gambar_lapangan/' . $fileName : null
         ]);
 
         if ($lapangan) {
-            return redirect()->route('lapangan')->with(Session::flash('berhasil_tambah', true));
+            return redirect()->route('lapangan')->with('berhasil_tambah', true);
         } else {
-            return redirect()->route('lapangan')->with(Session::flash('gagal_tambah', true));
+            return redirect()->route('lapangan')->with('gagal_tambah', true);
         }
     }
 
-
-
     public function hapus(Request $request, $id)
     {
-        $lapangan = lapanganModel::findorFAil($id);
+        $lapangan = LapanganModel::findOrFail($id);
+
+        // Hapus gambar jika ada
+        if ($lapangan->gambar && file_exists(public_path($lapangan->gambar))) {
+            unlink(public_path($lapangan->gambar));
+        }
 
         $lapangan->delete();
 
-        return redirect()->route('lapangan')->with(Session::flash('berhasil_hapus', true));
+        return redirect()->route('lapangan')->with('berhasil_hapus', true);
     }
 
     public function edit(Request $request, $id)
     {
-        // dd($request);
-        $lapangan = lapanganModel::findOrFail($id);
+        // Validasi input edit
+        $request->validate([
+            'nama' => 'required',
+            'deskripsi' => 'required',
+            'ukuran' => 'required',
+            'harga' => 'required',
+            'status' => 'required',
+            'tipe' => 'required',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
+        ]);
 
-        $lapangan->nama = $request->input('nama');
-        $lapangan->deskripsi = $request->input('deskripsi');
-        $lapangan->ukuran = $request->input('ukuran');
-        $lapangan->harga_per_jam = $request->input('harga');
-        $lapangan->status = $request->input('status');
-        $lapangan->tipe = $request->input('tipe');
+        $lapangan = LapanganModel::findOrFail($id);
 
+        $lapangan->nama = $request->nama;
+        $lapangan->deskripsi = $request->deskripsi;
+        $lapangan->ukuran = $request->ukuran;
+        $lapangan->harga_per_jam = $request->harga;
+        $lapangan->status = $request->status;
+        $lapangan->tipe = $request->tipe;
 
-        // Handle image update
+        // Update gambar jika ada upload baru
         if ($request->hasFile('gambar')) {
-            // Delete the old image file if it exists
-            $oldImagePath = public_path($lapangan->gambar);
-            if (file_exists($oldImagePath)) {
-                unlink($oldImagePath); // Delete the old image
+            if ($lapangan->gambar && file_exists(public_path($lapangan->gambar))) {
+                unlink(public_path($lapangan->gambar));
             }
 
             $file = $request->file('gambar');
             $fileName = time() . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('gambar_lapangan'), $fileName);
 
-            // Update the database with the new image path
             $lapangan->gambar = 'gambar_lapangan/' . $fileName;
         }
 
         $lapangan->save();
 
-        return redirect()->route('lapangan')->with(Session::flash('berhasil_edit', true));
+        return redirect()->route('lapangan')->with('berhasil_edit', true);
     }
 }
